@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPPT Score Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="IPPT Score Calculator">
+  <meta name="author" content="Soh Yuan Chin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>IPPT Score Calculator</h1>
+    <h2>Aim for Gold!</h2>
+    <p>Soh Yuan Chin<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Individual Physical Proficiency Test (IPPT) had some major changes made to its format and system, with a pilot taking place in 1 Sep 2014. The new IPPT is expected to be fully implemented across the SAF in 2015.</p>
+
+<p>Due to substantial differences between the previous IPPT&#39;s and the current IPPT&#39;s format and scoring system, this IPPT Score Calculator was written for servicemen to gauge how they will perform in the new IPPT.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Overview of New IPPT</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The new format will comprise of:</p>
+
+<ol>
+<li>Push-ups</li>
+<li>Sit-ups</li>
+<li>2.4km Run</li>
+</ol>
+
+<p>These three stations will measure the strength and cardiovascular fitness of the servicemen. This new and simpler format was designed to allow servicemen to train and maintain their fitness, without the need for specialised technique or equipment.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Scoring System of New IPPT</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The different award types and the score required for each of them are as follows:</p>
+
+<pre><code class="r">#The table generated below is a result of this code.
+library(pander)
+awardType &lt;- c(&#39;Gold (Commando/Guards)&#39;, &#39;Gold&#39;, &#39;Silver&#39;, &#39;Pass with Incentive&#39;, &#39;Pass&#39;)
+score &lt;- c(&#39;&gt;=90&#39;, &#39;&gt;=85&#39;, &#39;&gt;=75&#39;, &#39;&gt;=61&#39;, &#39;&gt;=51&#39;)
+ipptdata &lt;- data.frame(awardType, score)
+colnames(ipptdata) &lt;- c(&#39;Award Type&#39;, &#39;Score Required&#39;)
+pander(ipptdata, style = &#39;rmarkdown&#39;, split.cells = Inf)
+</code></pre>
+
+<table><thead>
+<tr>
+<th align="center">Award Type</th>
+<th align="center">Score Required</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center">Gold (Commando/Guards)</td>
+<td align="center">&gt;=90</td>
+</tr>
+<tr>
+<td align="center">Gold</td>
+<td align="center">&gt;=85</td>
+</tr>
+<tr>
+<td align="center">Silver</td>
+<td align="center">&gt;=75</td>
+</tr>
+<tr>
+<td align="center">Pass with Incentive</td>
+<td align="center">&gt;=61</td>
+</tr>
+<tr>
+<td align="center">Pass</td>
+<td align="center">&gt;=51</td>
+</tr>
+</tbody></table>
+
+<p>Each station&#39;s scoring table can be found <a href="http://www.mindef.gov.sg/imindef/press_room/official_releases/nr/2015/feb/27feb15_nr.html">here</a>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>IPPT Score Calculator to the Rescue!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>With all the different scoring tables, age groups, and a multitude of different factors in the new IPPT system, it can be confusing for some of the servicemen who are already used to the old IPPT system.</p>
+
+<p><a href="https://wysie.shinyapps.io/ipptcalculator/">IPPT Score Calculator</a> was made to solve this problem. Simply enter your age, the number of push-ups and sit-ups you can do, and the time it takes you to run 2.4km, and you will know how you&#39;d perform in the new IPPT system.</p>
+
+<p>Have fun!</p>
+
+<p>For more information on the new IPPT system, check out <a href="http://www.mindef.gov.sg/imindef/press_room/official_releases/nr/2015/feb/27feb15_nr.html">here</a>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Overview of New IPPT'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Scoring System of New IPPT'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='IPPT Score Calculator to the Rescue!'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

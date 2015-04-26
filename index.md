@@ -1,0 +1,71 @@
+---
+title       : IPPT Score Calculator
+subtitle    : Aim for Gold!
+author      : Soh Yuan Chin
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Background
+
+The Individual Physical Proficiency Test (IPPT) had some major changes made to its format and system, with a pilot taking place in 1 Sep 2014. The new IPPT is expected to be fully implemented across the SAF in 2015.
+
+Due to substantial differences between the previous IPPT's and the current IPPT's format and scoring system, this IPPT Score Calculator was written for servicemen to gauge how they will perform in the new IPPT.
+
+--- .class #id
+
+## Overview of New IPPT
+
+The new format will comprise of:
+
+1. Push-ups
+2. Sit-ups
+3. 2.4km Run
+
+These three stations will measure the strength and cardiovascular fitness of the servicemen. This new and simpler format was designed to allow servicemen to train and maintain their fitness, without the need for specialised technique or equipment.
+
+--- .class #id
+
+## Scoring System of New IPPT
+
+The different award types and the score required for each of them are as follows:
+
+
+```r
+#The table generated below is a result of this code.
+library(pander)
+awardType <- c('Gold (Commando/Guards)', 'Gold', 'Silver', 'Pass with Incentive', 'Pass')
+score <- c('>=90', '>=85', '>=75', '>=61', '>=51')
+ipptdata <- data.frame(awardType, score)
+colnames(ipptdata) <- c('Award Type', 'Score Required')
+pander(ipptdata, style = 'rmarkdown', split.cells = Inf)
+```
+
+
+
+|       Award Type       |  Score Required  |
+|:----------------------:|:----------------:|
+| Gold (Commando/Guards) |       >=90       |
+|          Gold          |       >=85       |
+|         Silver         |       >=75       |
+|  Pass with Incentive   |       >=61       |
+|          Pass          |       >=51       |
+
+Each station's scoring table can be found [here](http://www.mindef.gov.sg/imindef/press_room/official_releases/nr/2015/feb/27feb15_nr.html).
+
+--- .class #id
+
+## IPPT Score Calculator to the Rescue!
+
+With all the different scoring tables, age groups, and a multitude of different factors in the new IPPT system, it can be confusing for some of the servicemen who are already used to the old IPPT system.
+
+[IPPT Score Calculator](https://wysie.shinyapps.io/ipptcalculator/) was made to solve this problem. Simply enter your age, the number of push-ups and sit-ups you can do, and the time it takes you to run 2.4km, and you will know how you'd perform in the new IPPT system.
+
+Have fun!
+
+For more information on the new IPPT system, check out [here](http://www.mindef.gov.sg/imindef/press_room/official_releases/nr/2015/feb/27feb15_nr.html).
